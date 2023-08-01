@@ -5,4 +5,6 @@ module lagasse.c195 {
 
     opens lagasse.c195 to javafx.fxml;
     exports lagasse.c195;
+    exports lagasse.c195.controller;
+    opens lagasse.c195.controller to javafx.fxml;
 }
