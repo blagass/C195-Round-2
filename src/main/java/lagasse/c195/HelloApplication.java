@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import lagasse.c195.helper.JDBC;
 
 import java.io.IOException;
 import java.util.Locale;
@@ -23,6 +24,10 @@ public class HelloApplication extends Application {
     public static void main(String[] args) {
         Locale.setDefault(new Locale("fr"));
 
+        JDBC.openConnection();
+
         launch();
+
+        JDBC.closeConnection();
     }
 }

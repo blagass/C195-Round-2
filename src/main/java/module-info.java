@@ -1,6 +1,7 @@
 module lagasse.c195 {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.sql;
 
 
     opens lagasse.c195 to javafx.fxml;
