@@ -26,7 +26,7 @@ public class HelloApplication extends Application {
 
         JDBC.openConnection();
 
-        launch();
+        //launch();
 
         JDBC.closeConnection();
     }

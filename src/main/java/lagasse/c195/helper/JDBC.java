@@ -24,7 +24,9 @@ public abstract class JDBC {
 
         }
         catch(Exception e){
+            e.printStackTrace();
             System.out.println("Error" + e.getMessage());
+
 
         }
     }
