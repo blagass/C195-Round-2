@@ -4,9 +4,11 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import lagasse.c195.helper.CustomerQuery;
 import lagasse.c195.helper.JDBC;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.Locale;
 
 public class HelloApplication extends Application {
@@ -21,10 +23,18 @@ public class HelloApplication extends Application {
         stage.show();
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         Locale.setDefault(new Locale("fr"));
 
         JDBC.openConnection();
+
+        int rowsAffected = CustomerQuery.insert("John",19);
+        if(rowsAffected > 0 ){
+            System.out.println("Insert Successful!");
+        }
+        else{
+            System.out.println("Insert Failed :(");
+        }
 
         //launch();
 

@@ -4,11 +4,11 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public abstract class CustomerQuery {
-    public static int insert(String customerName,int customerId) throws SQLException {
-        String sql = "INSERT INTO CUSTOMERS(Customer_Name,Customer_Phone) VALUES(?,?)";
+    public static int insert(String customerName,int divisionId) throws SQLException {
+        String sql = "INSERT INTO CUSTOMERS(Customer_Name,Division_ID) VALUES(?,?)";
         PreparedStatement ps = JDBC.connection.prepareStatement(sql);
         ps.setString(1,customerName);
-        ps.setInt(2,customerId);
+        ps.setInt(2,divisionId);
         int rowsAffected = ps.executeUpdate();
         return rowsAffected;
     }
