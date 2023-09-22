@@ -28,13 +28,27 @@ public class HelloApplication extends Application {
 
         JDBC.openConnection();
 
+        /* INSERT QUERY
         int rowsAffected = CustomerQuery.insert("John",19);
+
         if(rowsAffected > 0 ){
             System.out.println("Insert Successful!");
         }
         else{
             System.out.println("Insert Failed :(");
         }
+        */
+
+        /* UPDATE QUERY
+        int rowsAffected = CustomerQuery.update("Yoyo",4);
+        if(rowsAffected > 0 ){
+            System.out.println("Update Successful!");
+        }
+        else{
+            System.out.println("Update Failed :(");
+        }
+        */
+
 
         //launch();
 
