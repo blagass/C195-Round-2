@@ -18,10 +18,11 @@ public static int update(String customerName, int customerId) throws SQLExceptio
         PreparedStatement ps = JDBC.connection.prepareStatement(sql);
         ps.setString(1,customerName);
         ps.setInt(2,customerId);
-    int rowsAffected = ps.executeUpdate();
-    return rowsAffected;
-
+        int rowsAffected = ps.executeUpdate();
+        return rowsAffected;
 }
+
+
 
 
 }
