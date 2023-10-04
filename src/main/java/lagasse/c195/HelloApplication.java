@@ -64,8 +64,9 @@ public class HelloApplication extends Application {
         CustomerQuery.select();
          */
 
-         // SELECT Division_ID QUERY
+         /* SELECT Division_ID QUERY
         CustomerQuery.select(60);
+          */
 
 
 
