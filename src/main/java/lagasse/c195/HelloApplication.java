@@ -49,6 +49,23 @@ public class HelloApplication extends Application {
         }
         */
 
+       /*DELETE QUERY
+        int rowsAffected = CustomerQuery.delete(4);
+
+        if(rowsAffected > 0 ){
+            System.out.println("Delete Successful!");
+        }
+        else{
+            System.out.println("Delete Failed :(");
+        }
+        */
+
+        /* SELECT QUERY
+        CustomerQuery.select();
+         */
+
+
+
 
         //launch();
 

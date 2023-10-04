@@ -1,6 +1,7 @@
 package lagasse.c195.helper;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public abstract class CustomerQuery {
@@ -22,7 +23,25 @@ public static int update(String customerName, int customerId) throws SQLExceptio
         return rowsAffected;
 }
 
+public static int delete(int customerId) throws SQLException {
+        String sql = "DELETE FROM CUSTOMERS WHERE Customer_ID = ?";
+        PreparedStatement ps = JDBC.connection.prepareStatement(sql);
+        ps.setInt(1, customerId);
+        int rowsAffected = ps.executeUpdate();
+        return rowsAffected;
+}
 
+public static void select() throws SQLException {
+        String sql = "SELECT * FROM CUSTOMERS";
+        PreparedStatement ps = JDBC.connection.prepareStatement(sql);
+        ResultSet rs = ps.executeQuery();
+        while(rs.next()){
+            int customerId = rs.getInt("Customer_ID");
+            String customerName = rs.getString("Customer_Name");
+            System.out.print(customerId + " | ");
+            System.out.print(customerName + "\n");
+        }
+}
 
 
 }
