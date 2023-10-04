@@ -43,5 +43,21 @@ public static void select() throws SQLException {
         }
 }
 
+    public static void select(int devisionId) throws SQLException {
+        String sql = "SELECT * FROM CUSTOMERS WHERE Division_ID = ?";
+        PreparedStatement ps = JDBC.connection.prepareStatement(sql);
+        ps.setInt ( 1, devisionId);
+        ResultSet rs = ps.executeQuery();
+        while(rs.next()){
+            int customerId = rs.getInt("Customer_ID");
+            String customerName = rs.getString("Customer_Name");
+            int divisionIdFK = rs.getInt("Division_ID");
+            System.out.print(customerId + " | ");
+            System.out.print(customerName + " | ");
+            System.out.print(divisionIdFK + "\n");
+        }
+    }
+
+
 
 }
