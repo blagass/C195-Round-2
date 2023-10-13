@@ -46,17 +46,17 @@
                   </StackPane>
                   <StackPane prefHeight="48.0" prefWidth="100.0">
                      <children>
-                        <Button mnemonicParsing="false" text="Add new" />
+                        <Button fx:id="addCustomerBtn" mnemonicParsing="false" onAction="#onAddCustomer" text="Add new" />
                      </children>
                   </StackPane>
                   <StackPane prefHeight="75.0" prefWidth="100.0">
                      <children>
-                        <Button mnemonicParsing="false" text="Edit" />
+                        <Button fx:id="editCustomerButton" mnemonicParsing="false" onAction="#onEditCustomer" text="Edit" />
                      </children>
                   </StackPane>
                   <StackPane prefHeight="48.0" prefWidth="100.0">
                      <children>
-                        <Button mnemonicParsing="false" text="Remove" />
+                        <Button fx:id="removeCustomerBtn" mnemonicParsing="false" onAction="#onRemoveCustomer" text="Remove" />
                      </children>
                   </StackPane>
                   <StackPane layoutX="10.0" layoutY="74.0" prefHeight="26.0" prefWidth="100.0" />
@@ -74,18 +74,18 @@
                            <children>
                               <HBox prefHeight="208.0" prefWidth="924.0">
                                  <children>
-                                    <TableView fx:id="customerTableView1" prefHeight="208.0" prefWidth="926.0">
+                                    <TableView fx:id="appointmentTableView" prefHeight="208.0" prefWidth="926.0">
                                        <columns>
-                                          <TableColumn prefWidth="107.0" text="Appointment ID" />
-                                          <TableColumn prefWidth="70.0" text="Title" />
-                                          <TableColumn prefWidth="96.0" text="Description" />
-                                          <TableColumn prefWidth="81.0" text="Location" />
-                                          <TableColumn prefWidth="116.0" text="Contact" />
-                                          <TableColumn prefWidth="91.0" text="Type" />
-                                          <TableColumn prefWidth="95.0" text="Start" />
-                                          <TableColumn prefWidth="59.0" text="End" />
-                                          <TableColumn prefWidth="123.0" text="Customer ID" />
-                                          <TableColumn prefWidth="97.0" text="User ID" />
+                                          <TableColumn fx:id="appIdCol" prefWidth="107.0" text="Appointment ID" />
+                                          <TableColumn fx:id="appTitleCol" prefWidth="70.0" text="Title" />
+                                          <TableColumn fx:id="appDescriptionCol" prefWidth="96.0" text="Description" />
+                                          <TableColumn fx:id="appLocationCol" prefWidth="81.0" text="Location" />
+                                          <TableColumn fx:id="appContactCol" prefWidth="116.0" text="Contact" />
+                                          <TableColumn fx:id="appTypeCol" prefWidth="91.0" text="Type" />
+                                          <TableColumn fx:id="appStartCol" prefWidth="95.0" text="Start" />
+                                          <TableColumn fx:id="appEndCol" prefWidth="59.0" text="End" />
+                                          <TableColumn fx:id="appCustomerIdCol" prefWidth="123.0" text="Customer ID" />
+                                          <TableColumn fx:id="appUserIdCol" prefWidth="97.0" text="User ID" />
                                        </columns>
                                     </TableView>
                                  </children>
@@ -107,9 +107,9 @@
             </StackPane>
             <VBox prefHeight="200.0" prefWidth="100.0" spacing="6.0">
                <children>
-                  <Button mnemonicParsing="false" text="Add new" />
-                  <Button mnemonicParsing="false" text="Edit" />
-                  <Button mnemonicParsing="false" text="Remove" />
+                  <Button fx:id="addAppBtn" mnemonicParsing="false" onAction="#onAddApp" text="Add new" />
+                  <Button fx:id="editAppBtn" mnemonicParsing="false" onAction="#onEditApp" text="Edit" />
+                  <Button fx:id="removeAppBtn" mnemonicParsing="false" onAction="#onRemoveApp" text="Remove" />
                </children>
                <padding>
                   <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />

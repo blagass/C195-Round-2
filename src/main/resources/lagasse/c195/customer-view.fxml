@@ -33,8 +33,8 @@
             <TextField fx:id="customerPhoneTxt" GridPane.columnIndex="1" GridPane.rowIndex="3" />
          </children>
       </GridPane>
-      <Button fx:id="customerSaveBtn" layoutX="208.0" layoutY="296.0" mnemonicParsing="false" text="Save" />
-      <Button fx:id="customerBackBtn" layoutX="300.0" layoutY="296.0" mnemonicParsing="false" text="Back" />
+      <Button fx:id="customerSaveBtn" layoutX="211.0" layoutY="342.0" mnemonicParsing="false" onAction="#onCustomerSave" text="Save" />
+      <Button fx:id="customerBackBtn" layoutX="327.0" layoutY="342.0" mnemonicParsing="false" onAction="#onCustomerBack" text="Back" />
       <Label layoutX="260.0" layoutY="57.0" text="Add New Customer" />
    </children>
 </AnchorPane>

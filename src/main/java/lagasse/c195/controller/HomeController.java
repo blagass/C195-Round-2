@@ -1,11 +1,34 @@
 package lagasse.c195.controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
-public class HomeController {
+import java.net.URL;
+import java.util.ResourceBundle;
 
+public class HomeController implements Initializable {
+
+    public Button addCustomerBtn;
+    public Button editCustomerButton;
+    public Button removeCustomerBtn;
+    public TableView appointmentTableView;
+    public TableColumn appIdCol;
+    public TableColumn appTitleCol;
+    public TableColumn appDescriptionCol;
+    public TableColumn appLocationCol;
+    public TableColumn appContactCol;
+    public TableColumn appTypeCol;
+    public TableColumn appStartCol;
+    public TableColumn appEndCol;
+    public TableColumn appCustomerIdCol;
+    public TableColumn appUserIdCol;
+    public Button addAppBtn;
+    public Button editAppBtn;
+    public Button removeAppBtn;
     @FXML
     private TableColumn customerAddressCol;
 
@@ -26,4 +49,28 @@ public class HomeController {
 
     @FXML
     private TableView customerTableView;
+
+    public void onAddCustomer(ActionEvent actionEvent) {
+
+    }
+
+    public void onEditCustomer(ActionEvent actionEvent) {
+    }
+
+    public void onRemoveCustomer(ActionEvent actionEvent) {
+    }
+
+    public void onAddApp(ActionEvent actionEvent) {
+    }
+
+    public void onEditApp(ActionEvent actionEvent) {
+    }
+
+    public void onRemoveApp(ActionEvent actionEvent) {
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+    }
 }
