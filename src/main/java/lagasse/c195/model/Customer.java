@@ -4,13 +4,14 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 public class Customer {
-    private ObservableList<Customer> customerList = FXCollections.observableArrayList();
+    private ObservableList<Appointment> associatedApps = FXCollections.observableArrayList();
     private String name;
     private String address;
     private int phone;
     private int postalCode;
     private String country;
     private int divisionId;
+
 
     private Customer(String name, String address, int phone, int postalCode, String country, int divisionId){
         this.name = name;
