@@ -60,9 +60,9 @@ public class HelloApplication extends Application {
         }
         */
 
-        /* SELECT QUERY
+        //SELECT QUERY
         CustomerQuery.select();
-         */
+
 
          /* SELECT Division_ID QUERY
         CustomerQuery.select(60);

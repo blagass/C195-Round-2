@@ -1,5 +1,7 @@
 package lagasse.c195.helper;
 
+import javafx.scene.control.cell.PropertyValueFactory;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -38,8 +40,15 @@ public static void select() throws SQLException {
         while(rs.next()){
             int customerId = rs.getInt("Customer_ID");
             String customerName = rs.getString("Customer_Name");
-            System.out.print(customerId + " | ");
+            String customerAddress = rs.getString("Address");
+            String customerPostalCode = rs.getString("Postal_Code");
+            String customerPhone = rs.getString("Phone");
+
             System.out.print(customerName + "\n");
+            System.out.print(customerAddress + "\n");
+            System.out.print(customerPostalCode + "\n");
+            System.out.print(customerPhone + "\n");
+            System.out.print(customerId + " | ");
         }
 }
 
